@@ -1,0 +1,44 @@
+/** Animations **/
+
+.fadeInAnim {
+  animation: fadeInAnimFullOpacity 2s ease 0s 1 normal forwards;
+}
+
+@keyframes fadeInAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInAnimFullOpacity {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageEntry {
+  0% {
+    opacity: 0;
+    transform: translateY(48px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.blockEntry {
+  animation: pageEntry 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  opacity: 1;
+}

@@ -1,0 +1,101 @@
+/** ACCORDION **/
+input[type="checkbox"] {
+    position: absolute;
+    z-index: -1;
+    border: 1px #000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 80px;
+  }
+  
+  .collapsibleAccordion {
+    border-radius: var(--faq-border-radius);
+    overflow: hidden;
+    width: 100%;
+    border: 2px solid var(--primary-hex);
+    position: relative;
+  }
+  
+  .collapsibleItem label {
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 400;
+    cursor: pointer;
+    color: var(--primary-hex);
+    text-transform: uppercase;
+    padding-inline-start: 0.5em;
+  }
+  .collapsibleItem label:hover {
+    background-color: var(--faq-open);
+  }
+  
+  .collapsibleItem label::before {
+    content: "\25b6";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: all 0.35s;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 15px;
+  }
+  
+  .collapsibleItemContent {
+    max-height: 0;
+    background-color: var(--faq-open);
+    transition: all 0.35s;
+    display: flex;
+  }
+  
+  input:checked + label {
+    background-color: var(--faq-open);
+  }
+  
+  input:checked + label::before {
+    transform: rotate(90deg);
+  }
+  
+  input:checked ~ .collapsibleItemContent {
+    max-height: 100vh;
+    padding: 24px;
+  }
+  
+  @media (max-width: 1023px) {
+    .collapsibleItemContent {
+      flex-direction: column;
+    }
+  
+      
+    .collapsibleItem label {
+      padding: 14px;
+    }
+  
+    .collapsibleItemContent .content {
+      width: 100%;
+    }
+    .collapsibleAccordion {
+      border-radius: 12px;
+    }
+    input:checked ~ .collapsibleItemContent {
+      max-height: 120%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .collapsibleItem label {
+      padding: var(--size-sm);
+      font-size: var(--size-sm);
+    }
+    .collapsibleItemContent .content {
+      width: 78%;
+    }
+  
+      
+    .collapsibleItem label {
+      padding: var(--size-sm);
+      font-size: var(--size-sm);
+    }
+  }
+  

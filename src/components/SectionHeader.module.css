@@ -1,0 +1,57 @@
+.intro {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-top: var(--nav-height);
+}
+
+.intro::after {
+  content: "";
+  display: block;
+  padding-bottom: 28%;
+}
+
+.mask {
+  position: absolute;
+  
+  align-items: center;
+  background-position: 50%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  -webkit-mask-image: radial-gradient(
+    50% 50% at 50% 50%,
+    #000 0,
+    transparent 100%
+  );
+  mask-image: radial-gradient(50% 50% at 50% 50%, #000 0, transparent 100%);
+  opacity: 0.5;
+  right: 0;
+  height: 100%;
+  z-index: 0;
+  
+}
+
+@media (max-width: 1023px) {
+  .intro::after {
+    padding-bottom: 100%;
+  }
+   .mask {
+    position: absolute;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+   .intro::after {
+    padding-bottom: 28%;
+  }
+   .mask {
+    right: 0;
+    top: -10%;
+    width: 75%;
+  }
+}
