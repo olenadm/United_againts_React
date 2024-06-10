@@ -14,7 +14,7 @@
 
 .mask {
   position: absolute;
-  
+
   align-items: center;
   background-position: 50%;
   background-attachment: fixed;
@@ -32,24 +32,23 @@
   right: 0;
   height: 100%;
   z-index: 0;
-  
 }
 
 @media (max-width: 1023px) {
   .intro::after {
     padding-bottom: 100%;
   }
-   .mask {
+  .mask {
     position: absolute;
     width: 100%;
   }
 }
 
 @media (min-width: 1024px) {
-   .intro::after {
+  .intro::after {
     padding-bottom: 28%;
   }
-   .mask {
+  .mask {
     right: 0;
     top: -10%;
     width: 75%;

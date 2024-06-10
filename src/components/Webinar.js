@@ -13,7 +13,7 @@ export default function Webinar(props) {
         <h4>Presenter biography</h4>
         <p>{biography}</p>
         {next && (
-          <a href="/" class="btn">
+          <a href="/" className="btn">
             Register for this webinar
           </a>
         )}

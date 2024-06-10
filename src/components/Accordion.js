@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Accordion.module.css"
+import classes from "./Accordion.module.css";
 
 export default function Accordion(props) {
   const { id } = props;
@@ -15,10 +15,14 @@ export default function Accordion(props) {
             aria-expanded="false"
             aria-controls={`panel${id}`}
           />
-          <label for={`tab${id}`}>
+          <label htmlFor={`tab${id}`}>
             A timeline of online abuse in sports in social media (example)
           </label>
-          <div className={classes.collapsibleItemContent} role="region" id={`panel${id}`}>
+          <div
+            className={classes.collapsibleItemContent}
+            role="region"
+            id={`panel${id}`}
+          >
             {props.children}
           </div>
         </div>

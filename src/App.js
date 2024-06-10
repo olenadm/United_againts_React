@@ -7,7 +7,7 @@ import { next } from "./data/next";
 import { previous } from "./data/previous";
 import Accordion from "./components/Accordion";
 import Webinar from "./components/Webinar";
-import { ParallaxProvider } from 'react-scroll-parallax';
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {
   return (
@@ -22,22 +22,21 @@ function App() {
 
         <SectionContent title="Next Webinar">
           {next.map((element, index) => (
-            <Webinar element={element} key={index} />
+            <Webinar element={element} key={`webinarnext${index}`} />
           ))}
         </SectionContent>
 
         <SectionContent title="Previous Webinars" previous={true}>
           {previous.map((element, index) => (
-           
-            <Accordion id={index}>
-                 <Webinar element={element} key={index} />
+            <Accordion id={index}  key={`acc${index}`} >
+              <Webinar element={element} key={`webinar${index}`} />
             </Accordion>
           ))}
         </SectionContent>
 
         <Footer />
       </main>
-      </ParallaxProvider>
+    </ParallaxProvider>
   );
 }
 
